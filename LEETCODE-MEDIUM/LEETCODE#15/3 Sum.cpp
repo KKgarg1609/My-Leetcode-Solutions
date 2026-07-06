@@ -4,6 +4,9 @@ public:
         set<vector<int>> threesum;
         sort(nums.begin(),nums.end());
        for(int i = 0; i < nums.size();i++){
+        if(nums[i] > 0){
+            break;
+        }
         vector<int> temp;
         int j = i+1;
         int k = nums.size()-1;

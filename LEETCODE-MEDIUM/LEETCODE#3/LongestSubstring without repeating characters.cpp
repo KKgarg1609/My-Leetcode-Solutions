@@ -9,7 +9,7 @@ public:
         int anslen = 0;
         int i = 0;
         int len = 0;
-        set<char> A;
+        unordered_set<char> A;
 
        while(i < s.size()){
         if(A.find(s[i]) == A.end()){
