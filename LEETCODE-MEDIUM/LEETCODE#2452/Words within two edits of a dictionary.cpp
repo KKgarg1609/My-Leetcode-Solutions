@@ -1,0 +1,26 @@
+class Solution {
+public:
+
+    int different(string s1,string s2){
+        int count = 0;
+        for(int i = 0; i < s1.size();i++){
+              if(s1[i] != s2[i]){
+                count++;
+              }
+        }
+        return count;
+    }
+
+    vector<string> twoEditWords(vector<string>& queries, vector<string>& dictionary) {
+        vector<string> ans;
+        for(int i = 0; i < queries.size();i++){
+            for(int j = 0;j < dictionary.size();j++){
+                if(different(queries[i],dictionary[j]) <= 2){
+                    ans.push_back(queries[i]);
+                    break;
+                }
+            }
+        }
+        return ans;
+    }
+};
